@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --primary : #1E88E5;
+        --secondary : #1C1B1F;
+        --background : #F5F5F5;
+    }
+
+    * {
+        @apply transition-colors duration-500 ease-in-out;
+    }
+}
+
+*{
+    font-family: "Roboto", serif;
+}
