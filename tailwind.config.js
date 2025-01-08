@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         primary: "var(--primary)",
+        primaryDarker: "var(--primaryDarker)",
         secondary: "var(--secondary)",
         mainBackground: "var(--background)"
       }
