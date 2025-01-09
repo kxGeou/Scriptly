@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Button() {
+function Button(props) {
   return (
-    <div>
-      
-    </div>
+    <button className='max-w-[500px] w-[100%] h-[3.5rem] bg-primary rounded-[8px]'>
+        <p className='text-mainBackground font-semibold'>{props.name}</p>
+    </button>
   )
 }
 
