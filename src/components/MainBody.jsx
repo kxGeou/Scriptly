@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from './Navigation.jsx';
 import HeroSection from './HeroSection.jsx';
 import ShowSection from './ShowSection.jsx';
+import CourseShowcase from './CourseShowcase.jsx';
 import "../App.css";
 function MainBody() {
   return (
@@ -9,6 +10,7 @@ function MainBody() {
       <Navigation></Navigation>  
       <HeroSection></HeroSection>
       <ShowSection></ShowSection>
+      <CourseShowcase></CourseShowcase>
     </div>
   )
 }

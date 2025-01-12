@@ -49,9 +49,9 @@ function Navigation() {
       <div className={`${listView ? "hidden" : "block"} `}>
 
 
-        <IoMenuSharp fontSize="3rem" className='text-primary cursor-pointer' onClick={visibleToggle} />
+        <IoMenuSharp fontSize="3rem" fill='var(--primary)' className='text-primary cursor-pointer' onClick={visibleToggle} />
         <div className={`transition-all duration-300 ${visible ? "opacity-100 translate-x-0 z-10" : "z-0 opacity-0 translate-x-5 pointer-events-none"} absolute right-0 top-0 flex flex-col items-end justify-center bg-primary text-mainBackground p-5 w-[100%] rounded-[12px] gap-6`} >
-          <IoMdClose fontSize="3rem" onClick={visibleToggle} className='cursor-pointer text-mainBackground' />
+          <IoMdClose fontSize="3rem" fill='white' onClick={visibleToggle} className='cursor-pointer text-mainBackground' />
 
           {navigationList.map((navItem, index) => (
             <a key={index} className='cursor-pointer text-[20px] hover:bg-primaryDarker w-full text-right p-2 rounded-[8px] text-mainBackground'>{navItem}</a>

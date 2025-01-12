@@ -5,8 +5,9 @@ import { FaLaptopCode } from "react-icons/fa6";
 import useWindowDimensions from '../hooks/useWindowDimensions.jsx';
 
 function ShowSection() {
+  const width = useWindowDimensions()
   return (
-    <div className='w-full mt-[8rem] flex flex-col gap-16'>
+    <div className={`${width < 1000 ? " flex-col" : "flex-row"} w-full mt-[8rem] flex gap-16 justify-center items-center`}>
       <ShowBox 
         icon={<FaBookBookmark />} 
         color = ""
