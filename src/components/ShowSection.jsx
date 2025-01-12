@@ -2,6 +2,8 @@ import React from 'react'
 import ShowBox from './ShowBox'
 import { FaBookBookmark } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa6";
+import useWindowDimensions from '../hooks/useWindowDimensions.jsx';
+
 function ShowSection() {
   return (
     <div className='w-full mt-[8rem] flex flex-col gap-16'>
