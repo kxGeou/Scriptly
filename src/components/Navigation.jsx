@@ -62,7 +62,7 @@ function Navigation() {
 
       <div className={`space-x-12 ${listView ? "block" : "hidden"}`}>
         {navigationList.map((listItem, index) => (
-          <a key={index} className={`cursor-pointer text-secondary ${index + 1 === navigationList.length ? "text-white bg-primary px-4 py-2 rounded-[8px] " : "bg-none"}`}>{listItem}</a>
+          <a key={index} className={`cursor-pointer text-secondary ${index + 1 === navigationList.length ? "text-white bg-primary px-4 py-2 rounded-[8px] hover:bg-primaryDarker " : "bg-none hover:text-primaryDarker hover:border-b-2 hover:border-primaryDarker"}`}>{listItem}</a>
         ))}
       </div>
 

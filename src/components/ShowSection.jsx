@@ -11,7 +11,7 @@ function ShowSection() {
       <ShowBox 
         icon={<FaBookBookmark />} 
         color = ""
-        title="Twoja uproszczona nauka"
+        title="Uproszczona nauka"
         firstList="Naucz się podstaw JavaScript bez zbędnego żargonu."
         secondList="Zrozum złożone koncepcje dzięki prostym przykładom"
         thirdList="Uzyskaj jasne wyjaśnienia krok po kroku, dla trudnych zagadnień."
@@ -20,10 +20,10 @@ function ShowSection() {
       </ShowBox>
       <ShowBox 
       icon={<FaLaptopCode fill='white' />} 
-      title="Twoja uproszczona nauka"
-      firstList="Naucz się podstaw JavaScript bez zbędnego żargonu."
-      secondList="Zrozum złożone koncepcje dzięki prostym przykładom"
-      thirdList="Uzyskaj jasne wyjaśnienia krok po kroku, dla trudnych zagadnień."
+      title="Umiejętności praktyczne"
+      firstList="Koduj od pierwszych minut i zobacz efekty swojej pracy"
+      secondList="Realizuj mini projekty: od prostego kalkulatora po interaktywną listę zadań"
+      thirdList="Zdobywaj doświadczenie, które wykorzystasz w prawdziwych projektach"
       bg = "bg-primary"
       color = "text-white"
       > 

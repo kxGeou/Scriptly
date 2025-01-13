@@ -3,6 +3,8 @@ import Navigation from './Navigation.jsx';
 import HeroSection from './HeroSection.jsx';
 import ShowSection from './ShowSection.jsx';
 import CourseShowcase from './CourseShowcase.jsx';
+import ActionSection from './ActionSection.jsx';
+import Footer from './Footer.jsx';
 import "../App.css";
 function MainBody() {
   return (
@@ -11,6 +13,8 @@ function MainBody() {
       <HeroSection></HeroSection>
       <ShowSection></ShowSection>
       <CourseShowcase></CourseShowcase>
+      <ActionSection></ActionSection>
+      <Footer></Footer>
     </div>
   )
 }
