@@ -5,6 +5,7 @@ import ShowSection from './ShowSection.jsx';
 import CourseShowcase from './CourseShowcase.jsx';
 import ActionSection from './ActionSection.jsx';
 import Footer from './Footer.jsx';
+import Database from './Database.jsx';
 import "../App.css";
 function MainBody() {
   return (
@@ -14,6 +15,7 @@ function MainBody() {
       <ShowSection></ShowSection>
       <CourseShowcase></CourseShowcase>
       <ActionSection></ActionSection>
+      <Database></Database>
       <Footer></Footer>
     </div>
   )
