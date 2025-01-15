@@ -15,9 +15,14 @@ function Database() {
         fetchCourses();
       }, []);
 
+      const [form,setForm] = useState("")
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(form)
+      }
       return (
         <div>
-          <h1>kursy</h1>
           <ul>
             {kursy.map((kursy, index) => (
               <li key={index}>
@@ -26,6 +31,14 @@ function Database() {
               </li>
             ))}
           </ul>
+
+          <form onSubmit={handleSubmit}>
+            <input className='bg-red-600' onChange={(e) => setForm(e.target.value)}></input>
+            <button type='submit'>Submit</button>
+          </form>
+
+          
+
         </div>
       );
     };
