@@ -52,7 +52,7 @@ function JavaScriptBasics() {
                         <li className='opacity-[75%]'>{firstLesson.ShowCase[1]}</li>
                       </div>
                       <div>
-                        <label className='text-purple-700 text-[20px]'>Mózg Robota</label>
+                        <label className='text-purple-800 text-[20px]'>Mózg Robota</label>
                         <li className='opacity-[75%]'>{firstLesson.ShowCase[2]}</li>
                       </div>
                     </ul>
