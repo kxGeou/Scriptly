@@ -1,7 +1,7 @@
 import React from 'react'
 import { SiGmail } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
-import Logo from './assets/logo.png'
+import Logo from './assets/logoo.png'
 import useWindowDimensions from '../hooks/useWindowDimensions.jsx';
 import { useCallback } from 'react';
 function Footer() {

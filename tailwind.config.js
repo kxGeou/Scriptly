@@ -10,7 +10,8 @@ export default {
         primary: "var(--primary)",
         primaryDarker: "var(--primaryDarker)",
         secondary: "var(--secondary)",
-        mainBackground: "var(--background)"
+        mainBackground: "var(--background)",
+        boxBackground: "var(--Boxbackground)"
       }
     },
   },

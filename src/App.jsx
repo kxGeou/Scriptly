@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Mainbody from './components/MainBody';
-import JavaScriptBasics from "./components/Course/JavaScriptBasics";
+import { lessons } from "./components/Course/lessonConfig";
 function App() {
 
   return (
@@ -8,7 +8,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Mainbody></Mainbody>} />
-          <Route path="/JavaScriptBasics" element={<JavaScriptBasics></JavaScriptBasics>} />
+          {lessons.map((lesson) => (
+                    <Route
+                        key={lesson.id}
+                        path={`/lesson/${lesson.id}`}
+                        element={<lesson.component />}
+                    />
+                ))}
         </Routes>
       </BrowserRouter>
     </>

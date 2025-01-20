@@ -1,5 +1,5 @@
 import React from 'react'
-import CompanyLogo from './assets/logo.png';
+import CompanyLogo from './assets/logoo.png';
 import { IoMenuSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { useState, useEffect } from 'react';
@@ -54,7 +54,7 @@ function Navigation() {
           <IoMdClose fontSize="3rem" fill='white' onClick={visibleToggle} className='cursor-pointer text-mainBackground' />
 
           {navigationList.map((navItem, index) => (
-            <a key={index} className='cursor-pointer text-[20px] hover:bg-primaryDarker w-full text-right p-2 rounded-[8px] text-mainBackground'>{navItem}</a>
+            <a key={index} className='cursor-pointer text-[20px] hover:bg-primaryDarker w-full text-right p-2 rounded-[8px] text-white'>{navItem}</a>
           ))}
         </div>
 

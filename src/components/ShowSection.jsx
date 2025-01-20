@@ -15,7 +15,7 @@ function ShowSection() {
         firstList="Naucz się podstaw JavaScript bez zbędnego żargonu."
         secondList="Zrozum złożone koncepcje dzięki prostym przykładom"
         thirdList="Uzyskaj jasne wyjaśnienia krok po kroku, dla trudnych zagadnień."
-        bg = "bg-mainBackground"
+        bg = "bg-boxBackground"
         >
       </ShowBox>
       <ShowBox 
