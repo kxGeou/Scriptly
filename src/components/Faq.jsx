@@ -1,6 +1,5 @@
 import React from 'react'
 import useWindowDimensions from '../hooks/useWindowDimensions.jsx';
-
 function Faq() {
     const width = useWindowDimensions()
 
