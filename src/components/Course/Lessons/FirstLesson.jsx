@@ -4,6 +4,11 @@ import "../../../App.css";
 import { db } from '../../../firebase.js';
 import { collection, getDocs } from 'firebase/firestore';
 import useWindowDimensions from '../../../hooks/useWindowDimensions.jsx';
+import CodeBlock from '../CourseComponents/CodeBlock.jsx';
+import HeaderLesson from '../CourseComponents/HeaderLesson.jsx';
+import ListItem from '../CourseComponents/ListItem.jsx';
+import TextItem from '../CourseComponents/TextItem.jsx';
+import Footer from '../../Footer.jsx';
 function FirstLesson() {
   const [firstLesson, setfirstLesson] = useState([]);
   const width = useWindowDimensions()
@@ -17,43 +22,39 @@ function FirstLesson() {
           fetchCourse();
         }, []);
   
-  
+const exampleCode = `
+  const greet = () => {
+    console.log("Hello, World!");
+  };
+  greet();
+  `;
+        
+
+
   return (
     <div className='bg-mainBackground py-8 px-5 min-h-screen'>
       <div className='max-w-[1400px] m-auto'>
-        <CourseNavigation ></CourseNavigation>
+        <CourseNavigation></CourseNavigation>
         {firstLesson.map((lesson, index) => (
-            <div className='flex flex-col gap-[5rem]'>
-              <section className='flex flex-col gap-[3rem]  mt-[4rem]'>
-                <div className='flex flex-col justify-center gap-4'>
-                  <h2 className='text-[40px] font-semibold leading-[110%]'>Odkryj moc JavaScript: Twój pierwszy krok w świat programowania!</h2>
-                  <p className={`${width > 800 ? "w-[70%]": "w-[100%]"} opacity-[75%] leading-[140%]`}>{lesson.Wprowadzenie}</p>
-                </div>
+          <div className='flex flex-col gap-[5rem]' key={index}>
+              <HeaderLesson title={lesson.Tytuł} desc={lesson.OpisT} purpose={lesson.Cele}></HeaderLesson>
+              <ListItem title="Funkcja JavaScript" desc="Wyobraź sobie że twoja przeglądarka to teatrzyk kukiełkowy" textList={lesson.Teatrzyk}></ListItem>
+              <ListItem title="Definicja JavaScript" desc={lesson.Definicja} textList={lesson.DefinicjaLista}></ListItem>
+              <TextItem title="Jak działa JavaScript w przeglądarce" miniDesc={lesson.JakDziala}></TextItem>
+              <section> 
+                <h2 className={`text-[30px] font-semibold leading-[110%]`}>Twój pierwszy program "Hello, World!"</h2>
+                <hr className='mt-4 h-[3px] bg-white'/>
+                <p className='text-[20px] font-semibold my-6'>Twój pierwszy program nie będzie wymagał nawet struktury HTML, jedynie co potrzebne to konsola z przeglądarki (skopiuj kod i wklej go do konsoli)</p>
 
-                <div className='flex flex-col gap-3'>
-                  <p className='text-[22px] font-semibold text-primary'>Cele Lekcji:</p>
-                  <ul className={`${width > 700 ? "" : "flex-col"} flex gap-2 w-full justify-between`}>
-                    <li className={`${width > 700 ? "w-[30%]" : "w-[100%]"} p-8 bg-boxBackground rounded-[12px]  flex justify-center items-center text-center hover:bg-primaryDarker`}>Dowiesz się, czym jest JavaScript</li>
-                    <li className={`${width > 700 ? "w-[30%]" : "w-[100%]"} p-8 bg-boxBackground rounded-[12px]  flex justify-center items-center text-center hover:bg-primaryDarker`}>Zrozumiesz, jak JavaScript działa w przeglądarce</li>
-                    <li className={`${width > 700 ? "w-[30%]" : "w-[100%]"} p-8 bg-boxBackground rounded-[12px]  flex justify-center items-center text-center hover:bg-primaryDarker`}>Napiszesz swój pierwszy program: „Hello, World!</li>
-                  </ul>
+                <div>
+                  <CodeBlock system="JavaScript" code={exampleCode} />
+                  <p className='opacity-[75%] mt-3'>Ten kod definiuje prostą funkcję greet, która wyświetla w konsoli tekst Hello, World!. Następnie funkcja jest wywoływana, aby zaprezentować jej działanie.</p>
                 </div>
               </section>
 
-              <section className='flex flex-col'>
-                <h2 className={`text-[30px] font-semibold leading-[110%]`}>Funkcja JavaScript</h2>
-                <hr className='mt-4 h-[2px] bg-white'/>
-                <div className='mt-8 flex flex-col gap-2'>
-                  <p className='text-[20px] font-semibold mb-4'>Wyobraź sobie że twoja przeglądarka to teatrzyk kukiełkowy</p>
-                  <ul className={`${width > 700 ? "gap-3" : "gap-4"} opacity-[75%] flex flex-col list-disc px-4`}>
-                    <li>{lesson.Teatrzyk[0]}</li>
-                    <li>{lesson.Teatrzyk[1]}</li>
-                    <li>{lesson.Teatrzyk[2]}</li>
-                  </ul>
-                </div>
-              </section>
             </div>
         ))}
+        <Footer></Footer>
       </div>
     </div>
   )

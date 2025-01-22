@@ -1,0 +1,33 @@
+import React from "react";
+
+const CodeBlock = ({ code, system }) => {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(code).then(() => {
+      alert("Kod został skopiowany!");
+    }).catch(err => {
+      console.error("Błąd kopiowania tekstu: ", err);
+    });
+  };
+
+  return (
+    <div className="relative bg-boxBackground rounded-[12px] p-[1rem] ">
+      <p className="font-semibold text-primary">{system}</p>
+      <pre style={styles.pre}>
+        <code>{code}</code>
+      </pre>
+      <button onClick={copyToClipboard} className="absolute top-4 right-4 bg-primary py-2 px-5 rounded-[8px] hover:bg-primaryDarker">
+        Copy
+      </button>
+    </div>
+  );
+};
+
+const styles = {
+  pre: {
+    margin: 0,
+    overflowX: "auto",
+    whiteSpace: "pre-wrap",
+  },
+};
+
+export default CodeBlock;

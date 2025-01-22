@@ -23,7 +23,7 @@ function Footer() {
   }
 
   return (
-    <div className={`flex gap-[3rem] justify-between mt-[15rem] mb-4 ${width > 800 ? "flex-row" : "flex-col"} `}>
+    <div className={`flex gap-[3rem] justify-between mt-[10rem] mb-4 ${width > 800 ? "flex-row" : "flex-col"} `}>
       <div className='flex flex-col gap-3 items-start'>
         <img src={Logo} alt="icon of our company" className='h-[2rem]'/>
         <p className='w-[75%] opacity-[70%]'>Platforma edukacyjna dla początkujących programistów w języku JavaScript</p>
