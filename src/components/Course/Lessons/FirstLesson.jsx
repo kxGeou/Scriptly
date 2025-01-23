@@ -43,7 +43,7 @@ const exampleCode = `
               <TextItem title="Jak działa JavaScript w przeglądarce" miniDesc={lesson.JakDziala}></TextItem>
               <section> 
                 <h2 className={`text-[30px] font-semibold leading-[110%]`}>Twój pierwszy program "Hello, World!"</h2>
-                <hr className='mt-4 h-[3px] bg-white'/>
+                <hr className='mt-4 h-[3.1px] bg-white'/>
                 <p className='text-[20px] font-semibold my-6'>Twój pierwszy program nie będzie wymagał nawet struktury HTML, jedynie co potrzebne to konsola z przeglądarki (skopiuj kod i wklej go do konsoli)</p>
 
                 <div>
