@@ -1,6 +1,6 @@
 import React from 'react'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
-function TextItem({title, desc, miniDesc}) {
+function TextItem({title, miniDesc}) {
     const width = useWindowDimensions()
     return (
         <section className='flex flex-col'>
