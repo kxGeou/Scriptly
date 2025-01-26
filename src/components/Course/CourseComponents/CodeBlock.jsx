@@ -1,6 +1,6 @@
 import React from "react";
 
-const CodeBlock = ({ code, system }) => {
+const CodeBlock = ({ code, system, styling }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code).then(() => {
       alert("Kod został skopiowany!");
@@ -10,7 +10,7 @@ const CodeBlock = ({ code, system }) => {
   };
 
   return (
-    <div className="relative bg-boxBackground rounded-[12px] p-[1rem] ">
+    <div className={`relative bg-boxBackground rounded-[12px] p-[1rem] ${styling} `}>
       <p className="font-semibold text-primary">{system}</p>
       <pre style={styles.pre}>
         <code>{code}</code>

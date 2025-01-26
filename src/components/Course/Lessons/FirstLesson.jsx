@@ -47,7 +47,7 @@ const exampleCode = `
                 <p className='text-[20px] font-semibold my-6'>Twój pierwszy program nie będzie wymagał nawet struktury HTML, jedynie co potrzebne to konsola z przeglądarki (skopiuj kod i wklej go do konsoli)</p>
 
                 <div>
-                  <CodeBlock system="JavaScript" code={exampleCode} />
+                  <CodeBlock system="JavaScript" code={exampleCode} styling={"my-[2rem]"}/>
                   <p className='opacity-[75%] mt-3'>Ten kod definiuje prostą funkcję greet, która wyświetla w konsoli tekst Hello, World!. Następnie funkcja jest wywoływana, aby zaprezentować jej działanie.</p>
                 </div>
               </section>
