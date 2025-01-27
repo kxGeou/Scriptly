@@ -226,7 +226,6 @@ console.log(typeof ageAsString); // "string"
                 <p className="text-[20px] font-semibold">{item.type}</p>
                 <p className="opacity-[75%] mb-5">{item.desc}</p>
                 <CodeBlock
-                  system={"JavaScript"}
                   code={item.code}
                   styling={"h-[5rem] flex justify-start items-center"}
                 ></CodeBlock>
