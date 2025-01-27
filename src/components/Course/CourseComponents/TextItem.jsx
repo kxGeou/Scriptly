@@ -7,7 +7,7 @@ function TextItem({title, miniDesc}) {
         <h2 className={`text-[30px] font-semibold leading-[110%]`}>{title}</h2>
         <hr className='mt-4 h-[2px] bg-white'/>
         <div className='mt-6 flex flex-col gap-2'>
-          <p className=' opacity-[75%] leading-7'>{miniDesc}</p>
+          <p className=' leading-7'>{miniDesc}</p>
         </div>
       </section>
   )

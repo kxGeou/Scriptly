@@ -1,6 +1,6 @@
 import React from "react";
 
-const CodeBlock = ({ code, system, styling, visible, description, pStyling }) => {
+const CodeBlock = ({ code, system, styling, visible, description, pStyling, Minidescription, mpStyling }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code).then(() => {
       alert("Kod został skopiowany!");
@@ -11,7 +11,7 @@ const CodeBlock = ({ code, system, styling, visible, description, pStyling }) =>
 
   return (
     <>
-      <p className={`${pStyling}`}>{description}</p>
+      <p className={`${pStyling} mt-8 font-semibold`}>{description}</p>
       <div className={`relative bg-boxBackground rounded-[12px] p-[1rem] ${styling} `}>
         <p className="font-semibold text-primary">{system}</p>
         <pre style={styles.pre}>
@@ -21,6 +21,8 @@ const CodeBlock = ({ code, system, styling, visible, description, pStyling }) =>
           Copy
         </button>
       </div>
+      <p className={`${mpStyling}`}>{Minidescription}</p>
+
     </>
   );
 };
