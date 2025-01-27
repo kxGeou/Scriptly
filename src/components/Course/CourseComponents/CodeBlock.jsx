@@ -1,6 +1,6 @@
 import React from "react";
 
-const CodeBlock = ({ code, system, styling }) => {
+const CodeBlock = ({ code, system, styling, visible }) => {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code).then(() => {
       alert("Kod został skopiowany!");
@@ -15,7 +15,7 @@ const CodeBlock = ({ code, system, styling }) => {
       <pre style={styles.pre}>
         <code>{code}</code>
       </pre>
-      <button onClick={copyToClipboard} className="absolute top-4 right-4 bg-primary py-2 px-5 rounded-[8px] hover:bg-primaryDarker">
+      <button onClick={copyToClipboard} className={`absolute top-4 right-4 bg-primary py-2 px-5 rounded-[8px] hover:bg-primaryDarker ${visible}`}>
         Copy
       </button>
     </div>
