@@ -5,7 +5,7 @@ const CodeBlock = ({ code, system, styling, visible, description, pStyling, Mini
     navigator.clipboard.writeText(code).then(() => {
       alert("Kod został skopiowany!");
     }).catch(err => {
-      console.error("Błąd kopiowania tekstu: ", err);
+      console.error("Błąd kopiowania tekstu : ", err);
     });
   };
 
