@@ -20,7 +20,7 @@ function Faq() {
     ]
 
   return (
-    <div className='flex flex-col font-semibold mt-[20rem]'>
+    <div className='flex flex-col font-semibold mt-[20rem]' id='faq'>
         <h2 className={`${width < 1000 ? "text-[20px]" : ""} text-[30px] mb-4`}>Sekcja Pytań (FAQ)</h2>
         <hr className=' mb-12 h-[2px] bg-white opacity-[50%]'/>
         <div className='flex flex-col gap-8'>

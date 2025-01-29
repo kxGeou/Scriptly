@@ -14,7 +14,8 @@ function Navigation() {
 
   return (
     <div className="flex relative justify-between items-center">
-      <img src={CompanyLogo} className="h-[2rem]" alt="Company Logo" />
+      <Link  to="/" ><img src={CompanyLogo} className={`h-[2.5rem] `} alt="Company Logo"/> </Link>
+      
 
       <div className="relative">
         <IoMenuSharp

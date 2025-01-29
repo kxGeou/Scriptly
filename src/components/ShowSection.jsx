@@ -7,7 +7,7 @@ import useWindowDimensions from '../hooks/useWindowDimensions.jsx';
 function ShowSection() {
   const width = useWindowDimensions()
   return (
-    <div className={`${width < 1000 ? " flex-col" : "flex-row"} w-full mt-[8rem] flex gap-16 justify-center items-center`}>
+    <div className={`${width < 1000 ? " flex-col" : "flex-row"} w-full mt-[8rem] flex gap-16 justify-center items-center`} id='opis'>
       <ShowBox 
         icon={<FaBookBookmark />} 
         color = ""
