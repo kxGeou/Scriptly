@@ -13,7 +13,7 @@ const CodeBlock = ({ code, system, styling, visible, description, pStyling, Mini
     <>
       <p className={`${pStyling} mt-8 font-semibold`}>{description}</p>
       <div className={`relative bg-boxBackground rounded-[12px] p-[1rem] ${styling} `}>
-        <p className="font-semibold text-primary">{system}</p>
+        <p className="font-semibold text-primary text-[8px]">{system}</p>
         <pre style={styles.pre}>
           <code>{code}</code>
         </pre>
