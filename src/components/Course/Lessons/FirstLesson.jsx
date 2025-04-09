@@ -10,12 +10,15 @@ import ListItem from '../CourseComponents/ListItem.jsx';
 import TextItem from '../CourseComponents/TextItem.jsx';
 import Footer from '../../Footer.jsx';
 function FirstLesson() {
+  console.log("Komponent FirstLesson się renderuje!");
+
   const [firstLesson, setfirstLesson] = useState([]);
   const width = useWindowDimensions()
       useEffect(() => {
           const fetchCourse = async () => {
             const dataBase = await getDocs(collection(db, "Lekcja1"));
             const coursesList = dataBase.docs.map(doc => doc.data());
+            console.log("Pobrane dane:", coursesList);
             setfirstLesson(coursesList);
           };
       
